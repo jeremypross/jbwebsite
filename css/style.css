@@ -1,3 +1,157 @@
 * {
-  
+  font-family: "Avenir", sans-serif;
+  cursor: pointer;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: tomato;
+}
+
+h1 {
+  padding: 10px 0;
+  color: black;
+}
+
+#topNav {
+  display: flex;
+  margin: 5px;
+}
+
+#topNav__title {
+  font-family: "Avenir", sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  flex: 11;
+}
+
+#topNav__right {
+  display: flex;
+}
+
+.topNav__right--menu {
+  position: relative;
+  top: 20px;
+  flex: 1;
+  padding: 0 20px;
+  color: black;
+}
+
+
+#containerLeft {
+
+}
+
+#menu {
+  position: absolute;
+  top: 70px;
+  left: -10px;
+  width: 200px;
+  list-style-type: none;
+}
+
+#menu a {
+  display: block;
+  padding: 10px 0 0 0;
+  color: black;
+}
+
+#menu a:hover {
+  color: tomato;
+  transition: .2s ease-in-out;
+}
+
+#menu li {
+  font-size: 22px;
+
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+#artistsContainer {
+  display: flex;
+}
+
+#cross {
+  top: 8px;
+  left: 10px;
+  position: relative;
+  opacity: 1;
+  transition: .3s ease-in;
+}#cross.anim {
+  opacity: 0;
+  transition: .3s ease-out;
+}
+
+#cross:hover {
+  color:tomato;
+  transition: color 0.2s ease;
+
+}
+
+#minus {
+  position: relative;
+  top: 7px;
+  left: 2px;
+  opacity: 0;
+  transition: .3s ease-out;
+}#minus.anim {
+  opacity: 1;
+  transition: .3s ease-in;
+}
+
+#minus:hover {
+  color: tomato;
+  transition: color 0.2s ease;
+
+}
+
+
+#menu__artists {
+  /* display: none; */
+  height: 0;
+  list-style-type: none;
+  padding: 0px 0 0 25px;
+  font-size: 22px;
+  overflow-y:scroll;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+}#menu__artists.anim {
+  delay: .3s;
+  height: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+#menu__artists li {
+  font-size: 14px;
+  padding: 0;
+}
+
+#menu__artists li a:hover {
+  color: tomato;
+}
+
+#containerRight {
+
+}
+
+#photo {
+  top: 18px;
+  left: 110px;
+  position: relative;
+}
+
+#photo img {
+  width: 70%;
+  padding: 0 2% 2% 15%;
 }
