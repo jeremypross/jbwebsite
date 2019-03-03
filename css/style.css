@@ -123,7 +123,7 @@ h1 {
   overflow-y:scroll;
   transition: visibility 0s, opacity 0.5s linear;
   visibility: hidden;
-  opacity: 1;
+  opacity: 0;
   height: 0;
   transition: .5s ease-in-out;
 }#menu__artists.anim {
@@ -148,10 +148,10 @@ h1 {
 
 #containerRight {
   flex: 9;
-  margin: 0 3% 10% 12%;
+  margin: 0 3% 10% 13%;
   transition: .4s ease-in-out;
 }#containerRight.anim {
-  margin: 0 3% 0 20%;
+  margin: 0 3% 0 22%;
   transition: .4s ease-in-out;
 
 }
@@ -167,7 +167,7 @@ h1 {
 }
 
 .photoRow img {
-  margin: 0% 5% 5% 0%;
+  margin: 0% 5% 0% 0%;
   padding: 0% 5%;
   flex: 4;
   width: 100%;
@@ -175,4 +175,21 @@ h1 {
 
 .photo {
   margin: 10px;
+}
+
+#quoteSource {
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+  padding-top: 10px;
+}
+
+.containerRight__postImage, .colorPrints, .galleryTitle {
+  text-align: center;
+}
+
+#galleryList {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
 }
