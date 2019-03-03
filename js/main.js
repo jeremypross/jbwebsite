@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   const artistLink = document.getElementById('artists');
   const artistMenu = document.getElementById('menu__artists');
+  const containerRight = document.getElementById('containerRight');
+
   const cross = document.getElementById('cross');
   const minus = document.getElementById('minus');
 
@@ -12,11 +14,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (artistMenu.classList.contains('anim')) {
       // hide menu
       artistMenu.classList.remove('anim');
+      containerRight.classList.remove('anim');
+
       minus.classList.remove('anim')
       cross.classList.remove('anim')
     } else {
       // show menu
       artistMenu.classList.add('anim');
+      containerRight.classList.add('anim');
+
       minus.classList.add('anim')
       cross.classList.add('anim')
     }

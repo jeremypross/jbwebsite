@@ -148,7 +148,16 @@ h1 {
 
 #containerRight {
   flex: 9;
-  margin: 0 5% 0 20%;
+  margin: 0 3% 10% 12%;
+  transition: .4s ease-in-out;
+}#containerRight.anim {
+  margin: 0 3% 0 20%;
+  transition: .4s ease-in-out;
+
+}
+
+#artistHeadline {
+  text-align: right;
 }
 
 .photoRow {
