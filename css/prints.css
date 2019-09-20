@@ -146,7 +146,6 @@ h1 {
 /* BODY */
 
 #containerRight {
-  display: flex;
   margin: 0 3% 10% 13%;
   transition: .4s ease-in-out;
 }#containerRight.anim {
