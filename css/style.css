@@ -4,7 +4,7 @@
 }
 
 a {
-  color: black;
+  color: blue;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -17,6 +17,8 @@ h1 {
   padding: 10px 0;
   color: black;
 }
+
+/* NAV */
 
 #topNav {
   display: flex;
@@ -35,14 +37,13 @@ h1 {
   display: flex;
 }
 
-.topNav__right--menu {
-  position: relative;
-  top: 20px;
-  flex: 1;
-  padding: 0 20px;
-  color: black;
-}
-
+  .topNav__right--menu {
+    position: relative;
+    top: 20px;
+    flex: 1;
+    padding: 0 20px;
+    color: black;
+  }
 
 #containerLeft {
 
@@ -137,14 +138,12 @@ h1 {
   font-size: 14px;
 }
 
-#menu__artists li a:hover {
-  color: tomato;
-}
-
 #containerLeft {
   flex: 1;
 
 }
+
+/* BODY */
 
 #containerRight {
   flex: 9;
@@ -156,10 +155,6 @@ h1 {
 
 }
 
-#artistHeadline {
-  text-align: right;
-}
-
 .photoRow {
   top: 18px;
   display: flex;
@@ -168,13 +163,45 @@ h1 {
 
 .photoRow img {
   margin: 0% 5% 0% 0%;
-  padding: 0% 5%;
+  padding: 5% 5%;
   flex: 4;
   width: 100%;
 }
 
 .photo {
+  position: relative;
   margin: 10px;
+}
+
+.photoCaption {
+  width: 100%;
+  bottom: 20px;
+  left: 13px;
+  font-size: 12px;
+  background-color: grey;
+  color: white;
+  position: absolute;
+  opacity: 0;
+}
+
+  .photo:hover .photoCaption {
+    opacity: .9;
+    transition: .3s ease-in-out;
+  }
+
+    /* .captionAnim {
+      opacity: .9;
+      transition: .3s ease-in-out;
+    } */
+
+
+
+.containerRight__postImage, .colorPrints, .galleryTitle {
+  text-align: center;
+}
+
+#artistHeadline {
+  text-align: right;
 }
 
 #quoteSource {
@@ -182,10 +209,6 @@ h1 {
   font-style: italic;
   text-align: right;
   padding-top: 10px;
-}
-
-.containerRight__postImage, .colorPrints, .galleryTitle {
-  text-align: center;
 }
 
 #galleryList {
