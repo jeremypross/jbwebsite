@@ -6,7 +6,7 @@
 a {
   color: black;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in-out;
 }
 
 a:hover {
@@ -148,6 +148,7 @@ h1 {
 /* BODY */
 
 #containerRight {
+  display: flex;
   margin: 0 3% 10% 13%;
   transition: .4s ease-in-out;
 }#containerRight.anim {
@@ -163,6 +164,10 @@ h1 {
   top: 18px;
   flex: 1;
   width: 100%;
+}
+
+.rowWrapper {
+  display: flex;
 }
 
 .photoRow img {

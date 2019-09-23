@@ -148,7 +148,7 @@ h1 {
 /* BODY */
 
 #containerRight {
-  display: flex;
+  /* display: flex; */
   margin: 0 3% 10% 13%;
   transition: .4s ease-in-out;
 }#containerRight.anim {
@@ -161,9 +161,17 @@ h1 {
 }
 
 .photoRow {
-  top: 18px;
+  /* top: 18px;
   flex: 1;
-  width: 100%;
+  width: 100%; */
+  display: flex;
+}
+
+.photo {
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+  flex: 1;
 }
 
 .photoRow img {
@@ -172,27 +180,26 @@ h1 {
   width: 100%;
 }
 
-.photo {
-  position: relative;
-  margin: 10px;
-  flex: 1;
-}
 
 .photoCaption {
-  top: 50%;
-  transform: translate(0 -50%);
+  /* top: 50%; */
+  /* transform: translate(0 -50%); */
+  top: 0;
   bottom: 0px;
   left: 0px;
   right: 0px;
   font-size: 10px;
-  background-color: grey;
+  background: rgba(29, 106, 154, 0.6);
   color: white;
   position: absolute;
   text-align: center;
-  opacity: 0;
   margin: 10px;
   padding: 10px;
   width: 100%;
+  overflow: hidden;
+  opacity: 0;
+
+
 }
 
   .photo:hover .photoCaption {
@@ -204,8 +211,6 @@ h1 {
       opacity: .9;
       transition: .3s ease-in-out;
     } */
-
-
 
 .containerRight__postImage, .colorPrints, .galleryTitle {
   text-align: center;
