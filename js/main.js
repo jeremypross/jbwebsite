@@ -43,13 +43,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     modal.appendChild(modalImg);
     modalImg.src = imageSrc;
     container.appendChild(modal);
+    document.body.style.backgroundColor = "#565656";
 
     // change cursor into X and make click close modal?
-
   };
   
   const closeModal = () => {
-    modal.style.display = "none";
+    container.removeChild(modal);
+    document.body.style.backgroundColor = "white";
+
+
   }
 
  
