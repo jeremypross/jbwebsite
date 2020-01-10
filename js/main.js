@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const containerRight = document.getElementById('containerRight');
   const photo = document.getElementsByClassName('photo');
   const caption = document.getElementsByClassName('photoCaption');
+  const container = document.getElementById('container');
 
   console.log("photo", photo)
 
@@ -33,25 +34,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // for in loop over json object to set src of array of image divs to json src object string
 
-  const hoverCaption = () => {
-    // create div for overlay
-    // append to photo div
-    // set innerHTML to caption in JSON object
-    // if user is hovering display, if not hide
-    // OR
-    caption.classList.add('anim');
+  var modal = document.createElement('div');
+  var modalImg = document.createElement('img');
+  
+  const imageModal = (e) => {
+    const imageSrc = e.target.parentElement.firstChild.nextElementSibling.src;
+    modal.setAttribute('id', 'modal');
+    modal.appendChild(modalImg);
+    modalImg.src = imageSrc;
+    container.appendChild(modal);
+
+    // change cursor into X and make click close modal?
 
   };
+  
+  const closeModal = () => {
+    modal.style.display = "none";
+  }
 
+ 
   artistLink.addEventListener('click', artistMenuToggle);
   cross.addEventListener('click', artistMenuToggle);
   minus.addEventListener('click', artistMenuToggle);
+  modal.addEventListener('click', closeModal);
+
+  for (var i=0; i < photo.length; i++) {
+    photo[i].addEventListener('click', imageModal, false);
+  }
 
   // for (var i=0; 0 < photo.length; i++) {
   //   photo[i].addEventListener('hover', hoverCaption)
   // }
-
-
-
 
 });
