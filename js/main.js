@@ -33,23 +33,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
   };
 
   // for in loop over json object to set src of array of image divs to json src object string
-
+  var modalContainer = document.createElement('div');
   var modal = document.createElement('div');
   var modalImg = document.createElement('img');
   
   const imageModal = (e) => {
     const imageSrc = e.target.parentElement.firstChild.nextElementSibling.src;
+    modalContainer.setAttribute('id', 'modalContainer');
     modal.setAttribute('id', 'modal');
+    modalContainer.appendChild(modal);
     modal.appendChild(modalImg);
     modalImg.src = imageSrc;
-    container.appendChild(modal);
-    document.body.style.backgroundColor = "#565656";
+    container.appendChild(modalContainer);
+    document.body.style.backgroundColor = "#333";
 
     // change cursor into X and make click close modal?
   };
   
   const closeModal = () => {
-    container.removeChild(modal);
+    container.removeChild(modalContainer);
     document.body.style.backgroundColor = "white";
 
 

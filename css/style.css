@@ -240,18 +240,23 @@ h1 {
 
 /* MODAL */
 
-#modal {
-  position: absolute;
-  top: 15%;
-  left: 10px;
-  right: 10px;
-  bottom: 15%;
+#modalContainer {
+  display: flex;
+  justify-content: center;
+}
 
+#modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #modal img {
-  width: 95vw;
-  height: auto;
+  width: auto;
+  height: 90vh;
   cursor: zoom-out;
 }
 
