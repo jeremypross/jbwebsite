@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const artistMenu = document.getElementById('menu__artists');
   const containerRight = document.getElementById('containerRight');
   const photo = document.getElementsByClassName('photo');
-  const caption = document.getElementsByClassName('photoCaption');
+  // const caption = document.getElementsByClassName('photoCaption');
   const container = document.getElementById('container');
 
   console.log("photo", photo)
@@ -47,6 +47,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     container.appendChild(modalContainer);
     document.body.style.backgroundColor = "#333";
 
+    for (var i=0; 0 < photo.length; i++) {
+      photo[i].style.opacity = '.1'
+    }
+
     // change cursor into X and make click close modal?
   };
   
@@ -54,9 +58,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     container.removeChild(modalContainer);
     document.body.style.backgroundColor = "white";
 
+    for (var i=0; 0 < photo.length; i++) {
+      photo[i].style.opacity = '1'
+    }
 
   }
-
  
   artistLink.addEventListener('click', artistMenuToggle);
   cross.addEventListener('click', artistMenuToggle);
@@ -66,9 +72,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
   for (var i=0; i < photo.length; i++) {
     photo[i].addEventListener('click', imageModal, false);
   }
-
-  // for (var i=0; 0 < photo.length; i++) {
-  //   photo[i].addEventListener('hover', hoverCaption)
-  // }
 
 });
