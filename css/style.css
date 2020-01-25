@@ -214,6 +214,7 @@ h1 {
 .photo:hover .photoCaption {
   visibility: visible;
   opacity: 1;
+  cursor: zoom-in;
 }
 
 
@@ -243,6 +244,7 @@ h1 {
 #modalContainer {
   display: flex;
   justify-content: center;
+
 }
 
 #modal {
@@ -252,12 +254,13 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  cursor: zoom-out;
 }
 
 #modal img {
   width: auto;
   height: 80vh;
-  cursor: sw-resize;
+  cursor: zoom-out;
 }
 
 #modalCaption {
