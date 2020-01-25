@@ -36,13 +36,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var modalContainer = document.createElement('div');
   var modal = document.createElement('div');
   var modalImg = document.createElement('img');
+  var captionContainer = document.createElement('div');
+  var caption = document.createElement('div');
+
+
   
   const imageModal = (e) => {
     const imageSrc = e.target.parentElement.firstChild.nextElementSibling.src;
+    const imageCaption = e.target.parentElement.lastChild.previousSibling.innerHTML;
+    const photo = document.getElementsByClassName('photo');
+    console.log(imageCaption);
     modalContainer.setAttribute('id', 'modalContainer');
+    captionContainer.setAttribute('id', 'modalCaptionContainer');
+    caption.setAttribute('id', 'modalCaption');
     modal.setAttribute('id', 'modal');
     modalContainer.appendChild(modal);
     modal.appendChild(modalImg);
+    modal.appendChild(captionContainer);
+    captionContainer.appendChild(caption);
+    caption.innerHTML = imageCaption;
     modalImg.src = imageSrc;
     container.appendChild(modalContainer);
     document.body.style.backgroundColor = "#333";
@@ -62,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       photo[i].style.opacity = '1'
     }
 
-  }
+  };
  
   artistLink.addEventListener('click', artistMenuToggle);
   cross.addEventListener('click', artistMenuToggle);

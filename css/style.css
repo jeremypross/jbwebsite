@@ -256,9 +256,17 @@ h1 {
 
 #modal img {
   width: auto;
-  height: 90vh;
+  height: 80vh;
   cursor: sw-resize;
 }
+
+#modalCaption {
+  color: white;
+  text-align: center;
+  padding-top: 2px;
+  font-size: 18px;
+}
+
 
 /* END of MODAL */
 
