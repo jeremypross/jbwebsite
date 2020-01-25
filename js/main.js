@@ -65,6 +65,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // change cursor into X and make click close modal?
   };
+
+  // document.getElementById('my-image').ondragstart = function() { return false; };
+  // $('img').on('dragstart', function(event) { event.preventDefault(); });
   
   const closeModal = () => {
     container.removeChild(modalContainer);
@@ -75,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
   };
- 
+
   artistLink.addEventListener('click', artistMenuToggle);
   cross.addEventListener('click', artistMenuToggle);
   minus.addEventListener('click', artistMenuToggle);
